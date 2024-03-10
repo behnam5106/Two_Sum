@@ -34,8 +34,8 @@ class Solution:
 
 #main
                 
-nums=[2,7,3,11,4,1,15]
-target=15
+nums=[-3,4,3,90]
+target=0
 solution=Solution()
 result=solution.twoSum(nums,target)
 print(result)
