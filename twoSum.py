@@ -11,11 +11,11 @@ class Solution:
 
         for i in range (0, len(a)):
             if a[i][0] < target/2:
-                b.append(i,a[i])
+                b.append(a[i])
             elif a[i][0] > target/2:
-                c.append(i,a[i])
+                c.append(a[i])
             else:
-                d.append(i,a[i])
+                d.append(a[i])
         if len(d)==2:
             result=[d[0][0],d[1][0]]
             return result
@@ -27,9 +27,10 @@ class Solution:
                         result=[b[i][0],c[j][0]]
                         return result
 
-        # print("b",b)
-        # print("c",c)
-        # print("d",d)             
+        print ("a", a)
+        print("b",b)
+        print("c",c)
+        print("d",d)             
 
         
 
@@ -40,7 +41,7 @@ target=0
 solution=Solution()
 result=solution.twoSum(nums,target)
 print(result)
-# print(result[0])
+print(nums)
 # print(result[1][0])
 # print(result[1][1])
 # print(result[4][1])
