@@ -1,20 +1,21 @@
 class Solution:
     def twoSum(self, nums: list[int], target: list[int] ) ->list[int]:
-        a=[] # <= target/2 
+
+        a=[]
         b=[] # <  target/2
         c=[] # >  target/2
         d=[] # =  target/2
 
         for i in range (0,len(nums)):
-            if nums[i] <= target:
-                a.append([i,nums[i]])
+            a.append([i,nums[i]])
+
         for i in range (0, len(a)):
-            if a[i][1] < target/2:
-                b.append(a[i])
-            elif a[i][1] > target/2:
-                c.append(a[i])
+            if a[i][0] < target/2:
+                b.append(i,a[i])
+            elif a[i][0] > target/2:
+                c.append(i,a[i])
             else:
-                d.append(a[i])
+                d.append(i,a[i])
         if len(d)==2:
             result=[d[0][0],d[1][0]]
             return result
