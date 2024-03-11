@@ -1,8 +1,8 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        hashmap = {}
+        hashmap = {}  
         for i in range(len(nums)):
-            hashmap[nums[i]] = i
+            hashmap[nums[i]] = i  # making a dictionary
         print(hashmap)
         for i in range(len(nums)):
             complement = target - nums[i]
